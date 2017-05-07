@@ -1,0 +1,324 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+html {
+	color: #222;
+	font-size: 1em;
+	line-height: 1.4;
+}
+
+::-moz-selection {
+	background: #b3d4fc;
+	text-shadow: none;
+}
+
+::selection {
+	background: #b3d4fc;
+	text-shadow: none;
+}
+
+hr {
+	display: block;
+	margin: 1em 0;
+	padding: 0;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+	vertical-align: middle;
+}
+
+fieldset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+textarea {
+	resize: vertical;
+}
+
+.browserupgrade {
+	margin: 0.2em 0;
+	padding: 0.2em 0;
+	background: #ccc;
+	color: #000;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body {
+	background: url("../img/footer_lodyas.png");
+}
+
+#search-container {
+	position: absolute;
+	top: 26%;
+	left: calc(50% - 237px);
+	margin: 0 auto;
+	padding: 24px 12px 12px 24px;
+	width: 450px;
+	border-radius: 6px;
+	-webkit-box-shadow: 0px 2px 10px 3px rgba(0,0,0,0);
+	-moz-box-shadow: 0px 2px 10px 3px rgba(0,0,0,0);
+	box-shadow: 0px 2px 10px 3px rgba(0,0,0,0);
+	margin-bottom: 24px;
+}
+
+div#logo {
+	margin-bottom: 16px;
+	margin-left: 30px;
+	width: 350px;
+	height: 50px;
+	background-image: url(../img/steamidfinder.png);
+	background-size: contain;
+}
+
+input:focus {
+	outline: none;
+}
+
+#search-form {
+	margin-bottom: 12px;
+	border: 1px solid black;
+	-moz-box-shadow: 0 0 2px 1px black;
+	box-shadow: 0 0 2px 1px black;
+}
+
+input#query {
+	padding: 2px 10px;
+	padding-top: 0;
+	width: calc(100% - 100px);
+	height: 30px;
+	border: none;
+	background-color: #F9F9F9;
+	background-position: calc(100% - 10px);
+	/*background-image: url(https://www.tmdn.org/tmdsview-web/resources/images/loading-gallery.gif);*/
+	background-size: 22px;
+	background-repeat: no-repeat;
+	font-size: 14px;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 12px;
+}
+
+input#query:hover {
+	background-color: #FFF;
+}
+
+input#submit {
+	float: right;
+	width: 80px;
+	height: 32px;
+	border: none;
+	background-color: #008BBA;
+	color: #fff;
+	font-family: 'Montserrat', sans-serif;
+}
+
+input#submit:hover {
+	background-color: #EF7329;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+	padding-top: 4px;
+	font-size: 12px;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	padding-top: 4px;
+	font-size: 12px;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+	padding-top: 4px;
+	font-size: 12px;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	padding-top: 4px;
+	font-size: 12px;
+}
+
+#userInfo {
+	display: none;
+	margin-top: 8px;
+}
+
+.userInfo {
+	margin-top: 12px;
+	margin-left: 10px;
+	width: 430px;
+	color: white;
+	line-height: 20px;
+}
+
+.userInfo label {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 0.964em;
+}
+
+.userInfo input {
+	float: right;
+	width: 66%;
+	border: none;
+	background: none;
+	font-size: 14px;
+	cursor: text;
+}
+
+#invalidUser {
+	display: none;
+	float: left;
+	margin-bottom: 2px;
+	color: rgba(255, 23, 23, 0.92);
+}
+
+#moreInfo {
+    float: right;
+    color: #b3b3b3;
+    font-size: 0.6em;
+    padding: 2px 11px;
+    cursor: pointer;
+}
+
+#moreInfo:hover {
+	color: #fff;
+}
+
+.ownerProfile {
+    width: 32px;
+    height: 32px;
+    background-image: url(/img/steam-logo.png);
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+	transition: all 0.2s;
+}
+
+.ownerProfile:hover {
+	bottom: 3%;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+
+}
+
+@media print,
+	   (-o-min-device-pixel-ratio: 5/4),
+	   (-webkit-min-device-pixel-ratio: 1.25),
+	   (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+	display: none !important;
+	visibility: hidden;
+}
+
+.visuallyhidden {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	margin: -1px;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	border: 0;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+	position: static;
+	overflow: visible;
+	clip: auto;
+	margin: 0;
+	width: auto;
+	height: auto;
+}
+
+.invisible {
+	visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+	display: table;
+	content: " ";
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.clearfix {
+	*zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+	*,
+	*:before,
+	*:after {
+		background: transparent !important;
+		box-shadow: none !important;
+		color: #000 !important;
+		text-shadow: none !important;
+	}
+	a,
+	a:visited {
+		text-decoration: underline;
+	}
+	a[href]:after {
+		content: " (" attr(href) ")";
+	}
+	abbr[title]:after {
+		content: " (" attr(title) ")";
+	}
+	a[href^="#"]:after,
+	a[href^="javascript:"]:after {
+		content: "";
+	}
+	pre,
+	blockquote {
+		border: 1px solid #999;
+		page-break-inside: avoid;
+	}
+	thead {
+		display: table-header-group;
+	}
+	tr,
+	img {
+		page-break-inside: avoid;
+	}
+	img {
+		max-width: 100% !important;
+	}
+	p,
+	h2,
+	h3 {
+		orphans: 3;
+		widows: 3;
+	}
+	h2,
+	h3 {
+		page-break-after: avoid;
+	}
+}

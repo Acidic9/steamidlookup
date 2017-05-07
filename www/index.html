@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+
+<head>
+	<meta charset="utf-8">
+	<title>Steam ID Finder</title>
+	<meta name="description" content="Resolve a Steam profile via SteamID (64/32) or Custom URL.">
+	<meta name="tags" content="steam,id,ip,lookup,resolve,find,search,steamid">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="icon/png" href="http://steam.tools/img/steam.png">
+	<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+	<link rel="stylesheet" href="/css/normalize.min.css">
+	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="/css/flags.css">
+
+	<!-- Google Web Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+	<!--[if lt IE 8]>
+			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+	<div id="search-container" class="inner">
+		<div id="logo"></div>
+
+		<form action="./" method="post" id="search-form" onsubmit="return false;" autocomplete="off">
+			<input type="text" name="query" id="query" placeholder="Enter SteamID (64 or 32) or Custom URL here." value="" spellcheck="false">
+			<input type="submit" id="submit" value="Search">
+		</form>
+
+		<div id="invalidUser">No User Found</div>
+
+		<!--<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style="float: right;">
+				<input type="hidden" name="cmd" value="_s-xclick">
+				<input type="hidden" name="hosted_button_id" value="CMW8J9KGGCWJQ">
+				<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+				<img alt="" border="0" src="https://www.paypalobjects.com/en_AU/i/scr/pixel.gif" width="1" height="1">
+			</form>-->
+
+		<div class="clear"></div>
+
+		<div id="userInfo">
+			<div style="width:450px;height:120px;background-image:url(img/badge.png);background-size:100%;border-radius:8px;" id="steamBadge"></div>
+
+			<div class="userInfo">
+				<label for="personaname">Display Name:</label>
+				<input type="text" id="personaname" name="personaname" readonly value="">
+			</div>
+
+			<div class="userInfo">
+				<label for="communityID">Community ID:</label>
+				<input type="text" id="communityID" name="communityID" readonly value="">
+			</div>
+
+			<div class="userInfo">
+				<label for="steamID">Steam ID:</label>
+				<input type="text" id="steamID" name="steamID" readonly value="">
+			</div>
+
+			<div class="userInfo expandedInfo">
+				<label for="steamID32">Steam ID32:</label>
+				<input type="text" id="steamID32" name="steamID32" readonly value="">
+			</div>
+
+			<div class="userInfo expandedInfo">
+				<label for="steamID3">Steam ID3:</label>
+				<input type="text" id="steamID3" name="steamID3" readonly value="">
+			</div>
+
+			<div class="userInfo">
+				<label for="profileurl">Profile URL:</label>
+				<input type="text" id="profileurl" name="profileurl" readonly value="" style="cursor:pointer;">
+			</div>
+
+			<div class="userInfo expandedInfo">
+				<label for="realName">Real Name:</label>
+				<input type="text" id="realName" name="realName" readonly value="">
+			</div>
+
+			<div class="userInfo expandedInfo">
+				<label for="public">Public:</label>
+				<input type="text" id="public" name="public" readonly value="">
+			</div>
+
+			<div class="userInfo expandedInfo">
+				<label for="state">State:</label>
+				<input type="text" id="state" name="state" readonly value="">
+			</div>
+
+			<div class="userInfo">
+				<label for="lastlogoff">Last Online:</label>
+				<input type="text" id="lastlogoff" name="lastlogoff" readonly value="">
+			</div>
+
+			<div class="userInfo expandedInfo">
+				<label for="countryCode">Country Code:</label>
+				<input type="text" id="countryCode" name="countryCode" style="width: calc(66% - 24px);margin-left: 6px;" readonly value="">
+				<span class="flag" id="countryCodeFlag"></span>
+			</div>
+
+			<div class="userInfo expandedInfo">
+				<label for="primaryGroupID">Primary Group ID:</label>
+				<input type="text" id="primaryGroupID" name="primaryGroupID" readonly value="">
+			</div>
+
+			<div class="userInfo expandedInfo">
+				<label for="timeCreated">Account Created:</label>
+				<input type="text" id="timeCreated" name="timeCreated" readonly value="">
+			</div>
+
+			<div class="userInfo expandedInfo">
+				<label for="currentlyPlaying">Currently Playing:</label>
+				<input type="text" id="currentlyPlaying" name="currentlyPlaying" readonly value="">
+			</div>
+
+			<div class="userInfo expandedInfo">
+				<label for="serverIP">Current Server IP:</label>
+				<input type="text" id="serverIP" name="serverIP" readonly value="">
+			</div>
+
+			<div id="moreInfo">+ Expand</div>
+		</div>
+	</div>
+
+	<a href="http://steamcommunity.com/id/ari9" target="_blank">
+		<div class="ownerProfile"></div>
+	</a>
+
+	<div id="hidden" style="display:none;"></div>
+
+	<script src="/js/vendor/modernizr-2.8.3.min.js"></script>
+	<script src="/js/vendor/jquery.min.js"></script>
+	<script src="/js/vendor/jquery-ui.min.js"></script>
+	<script src="/js/vendor/jquery.shadow-animation.js"></script>
+
+	<script src="/js/main.js"></script>
+
+	<script>
+		(function(i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function() {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date(); a = s.createElement(o),
+			m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', 'UA-83188849-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+</body>
+
+</html>

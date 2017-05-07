@@ -1,0 +1,51 @@
+{
+	"ImportPath": "github.com/Acidic9/steamidfinder",
+	"GoVersion": "go1.8",
+	"GodepVersion": "v79",
+	"Deps": [
+		{
+			"ImportPath": "github.com/Acidic9/go-steam/steamid",
+			"Rev": "c3f5884e36d9c6ed62c025c227a09e117f91b8af"
+		},
+		{
+			"ImportPath": "github.com/Acidic9/render",
+			"Rev": "ccc7c263abb2755c49c287006f3804a94e37003b"
+		},
+		{
+			"ImportPath": "github.com/Acidic9/steam",
+			"Rev": "82d042d07b46ceb58dcbf7e1c03ba5a3963ab99a"
+		},
+		{
+			"ImportPath": "github.com/codegangsta/inject",
+			"Comment": "v1.0-rc1-10-g33e0aa1",
+			"Rev": "33e0aa1cb7c019ccc3fbe049a8262a6403d30504"
+		},
+		{
+			"ImportPath": "github.com/go-martini/martini",
+			"Comment": "v1.0-188-g22fa469",
+			"Rev": "22fa46961aabd2665cf3f1343b146d20028f5071"
+		},
+		{
+			"ImportPath": "github.com/moul/http2curl",
+			"Rev": "4e24498b31dba4683efb9d35c1c8a91e2eda28c8"
+		},
+		{
+			"ImportPath": "github.com/oxtoacart/bpool",
+			"Rev": "4e1c5567d7c2dd59fa4c7c83d34c2f3528b025d6"
+		},
+		{
+			"ImportPath": "github.com/parnurzeal/gorequest",
+			"Comment": "v0.2.14-33-gea77900",
+			"Rev": "ea779001e09326d30d455dbf37bc0d08c49941a2"
+		},
+		{
+			"ImportPath": "github.com/pkg/errors",
+			"Comment": "v0.8.0-4-gff09b13",
+			"Rev": "ff09b135c25aae272398c51a07235b90a75aa4f0"
+		},
+		{
+			"ImportPath": "golang.org/x/net/publicsuffix",
+			"Rev": "ffcf1bedda3b04ebb15a168a59800a73d6dc0f4d"
+		}
+	]
+}
