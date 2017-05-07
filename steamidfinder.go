@@ -2,8 +2,10 @@ package main
 
 import (
 	"errors"
+	"fmt"
 	"log"
 	"net/http"
+	"os"
 	"strconv"
 	"time"
 
@@ -114,7 +116,7 @@ func main() {
 		ren.JSON(http.StatusOK, jsonResponse)
 	})
 
-	m.RunOnAddr(":8060")
+	m.RunOnAddr(fmt.Sprintf(":%v", os.Getenv("PORT")))
 }
 
 func getPlayerSummaries(apiKey string, id64 steamid.ID64) (playerSummaries, error) {
